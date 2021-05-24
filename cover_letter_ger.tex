@@ -40,7 +40,9 @@ backaddress=false,
 \newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
 \newcommand{\todaay}{\leadingzero{\day}.~\monthword{\the\month} \the\year}
 
-% set koma variables
+
+% --------------------------------------------------------------------------------
+% set koma variables, this needs to be edited by the user
 \setkomavar{fromname}[]{John Smith}
 \setkomavar{fromzipcode}{12345}
 \setkomavar{place}{Ort}
@@ -51,6 +53,7 @@ backaddress=false,
 \setkomavar{fromemail}{john.smith@example.com}
 \setkomavar{date}{\todaay}
 \setkomavar{subject}{Bewerbung~als~<POSITION>}
+% --------------------------------------------------------------------------------
 
 % Layout
 \setplength{refvpos}{6cm}
@@ -59,37 +62,21 @@ backaddress=false,
 \setplength{toaddrvpos}{2cm}
 \setplength{sigbeforevskip}{0.2cm}
 
-% Anrede
+% --------------------------------------------------------------------------------
+% edit the companies address
 \newcommand{\address}{
 Firmenname    \\
 Firmenadresse \\
 Kontakt       \\
 }
+% --------------------------------------------------------------------------------
 
 \begin{document}
 
 \begin{letter}{\address}
   \opening{Sehr~geehrte~Damen~und~Herren}
 
-  Mit großem Interesse habe ich Ihre Vakanz als Werkstudent Business Intelligence gefunden.
-  Hiermit möchte ich mich auf diese ausgeschriebene Stelle bewerben.
-
-  Am Ende meines Bachelorstudiums habe ich angefangen mich im Zuge meiner Bachelorarbeit näher mit dem Bereich künstliche Intelligenz (KI) zu beschäftigen und mich darauf zu spezialisieren.
-  Anschließend habe ich an einer im selben Themenbereich angesiedelten Semesterarbeit gearbeitet.
-  Zusätzlich zu meiner Semesterarbeit habe ich als studentischer Mitarbeiter die Tätigkeit in einer Forschungsgruppe meiner Universität aufgenommen.
-  Diese Gruppe forscht an Anwendungen von KI-Methoden auf physikalische Problemstellungen.
-  Interessant sind für mich nicht nur die technischen Aspekte von KI, sondern auch wie sie eingesetzt werden kann, Unternehmen und/oder Privatpersonen im alltäglichen Leben zu unterstützen.
-  Mit dem großen Potenzial, welches die KI bietet, kommt auch eine ebenso große Verantwortung mit sich, dieses Potenzial nachhaltig und weise einzusetzen.
-  Durch meine vorherige Arbeit als Werkstudent bei der Siemens AG im Bereich Business Development und bei OHB als Softwareentwickler fühle ich mich mehr als geeignet, meine dort gewonnenen Kenntnisse mit meinen in der Universität erworbenen Kompetenzen zu verbinden und so PwC zu helfen, deren Kunden eine noch bessere Entwicklung technologiebasierter Lösungen zu ermöglichen.
-  Was für mich sehr herausfordernd und spannend ist sind Beratungsleistungen zur Optimierung von Geschäftsprozessen und IT-Systemen, sowie deren genaue und detaillierte Dokumentation.
-  Meine Arbeit als Softwareentwickler bei OHB hat mir deutlich gezeigt, wie wichtig eine sehr gute Prozessdokumentation ist.
-  Der Bereich Assurance innerhalb von PwC fasziniert mich besonders, da dort Strategien zur digitalen Transformation und auch Anwendungen von KI im Rahmen eines Wirtschaftsprüfungsunternehmens entwickelt und angewandt werden.
-  Meine bisherige universitäre Ausbildung sowie meine praktische Erfahrung würden es mir hier ermöglichen, meine Kenntnisse bestmöglich einzubringen und zu erweitern.
-
-  Ich möchte mich immer weiter verbessern und mich neuen Herausforderungen stellen.
-  Besonders reizt es mich, meine Fähigkeiten im Team zu arbeiten, meine Motivation und meine fachlichen sowie sozialen Kompetenzen für ein Unternehmen wie PwC einzusetzen und mich dadurch weiter zu entwickeln.
-
-  Um Ihnen zu zeigen, wie ich ein belebender Teil Ihrer Firma werden kann, freue ich mich über eine Einladung zu einem Vorstellungsgespräch.
+  Hier den Text für das Anschreiben einfügen, max. 1 Seite.
   \closing{Freundliche Grüße}
 
 \end{letter}

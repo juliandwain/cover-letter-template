@@ -40,7 +40,8 @@ backaddress=false,
 \newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
 \newcommand{\todaay}{\leadingzero{\day}~\monthword{\the\month} \the\year}
 
-% set koma variables
+% --------------------------------------------------------------------------------
+% set koma variables, this needs to be edited by the user
 \setkomavar{fromname}[]{John Smith}
 \setkomavar{fromzipcode}{12345}
 \setkomavar{place}{Place}
@@ -51,6 +52,7 @@ backaddress=false,
 \setkomavar{fromemail}{john.smith@example.com}
 \setkomavar{date}{\todaay}
 \setkomavar{subject}{Application~as~<POSITION>}
+% --------------------------------------------------------------------------------
 
 % Layout
 \setplength{refvpos}{6cm}
@@ -59,37 +61,21 @@ backaddress=false,
 \setplength{toaddrvpos}{2cm}
 \setplength{sigbeforevskip}{0.2cm}
 
-% Anrede
+% --------------------------------------------------------------------------------
+% edit the companies address
 \newcommand{\address}{
 Company Name    \\
 Company Address \\
 Contact         \\
 }
+% --------------------------------------------------------------------------------
 
 \begin{document}
 
 \begin{letter}{\address}
   \opening{To~whom~it~may~concern}
 
-  With great interest I have encountered your advertisement for an open position as a working student at Group Data Analytics on my LinkedIn feed.
-  I would hereby kindly like to hand in my application for this vacancy.
-
-  At the end of my undergraduate studies, I decided to focus on artificial intelligence (AI) by choosing a bachelor’s thesis topic in this domain.
-  This then continued with a term paper written during the first year of my graduate studies located in the same area of research.
-  Additionally, I am currently a student assistant in a research team at my university which is working on the application of AI to physical systems.
-  I am not only interested in the technical implementation of AI, but I am also curious about how AI can help people and businesses to improve their life.
-
-  The potential of AI is what everyone is talking about these days, but in my opinion, the potential must be used wisely.
-  For this, the people working on the strategic development of companies regarding AI and digital transformation must be highly qualified as well as coming from different academic backgrounds to ensure diversity of solution finding.
-  In my opinion I am perfectly suited for this position as I am experienced not only in AI and the technical point of view, but also in strategic business development and market potential, because of my working experience at Siemens.
-  I am willing to apply my knowledge to help Allianz SE transform their strategic agenda and I am also looking forward to gaining new experience in the field of AI and see how it is used in a multinational company like the Allianz group.
-  I am particularly interested in this position since on the one hand I want to learn more about the application of AI in insurance and financial services, and on the other hand the role within a group function catering to other entities and divisions offers a great possibility to gain working experience within a diverse and international environment.
-
-  I am always striving for knowledge and I am constantly trying to get better at what I am doing.
-  Because of my focus in university and my previous work experience, I think I am perfectly suited for this position to help Allianz SE shape their strategic agenda for Data Analytics and AI.
-  Both experiences, i.e., university and professional work, taught me to solve complex problems by thinking creative and generating new, never existing before solutions.
-
-  I appreciate the chance to meet with you to discuss how I could be a vital part of your company.
+  Insert here the text for the cover letter, this should be max. 1 page.
   \closing{Yours faithfully}
 
 
