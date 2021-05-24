@@ -4,6 +4,8 @@ fontsize=11pt, % fontsize
 twoside=off, % onesided layout
 version=last,
 foldmarks=false,
+fromalign=center,
+fromrule=true,
 frommobilephone,
 fromemail,
 subject=titled,
@@ -33,6 +35,8 @@ backaddress=false,
 ]{geometry}
 \usepackage{graphicx}
 
+\usepackage{hyperref}
+
 % custom commands
 \newcommand{\monthword}[1]{\ifcase#1\or Januar\or Februar\or März\or April\or
 	Mai\or Juni\or Juli\or August\or
@@ -40,9 +44,9 @@ backaddress=false,
 \newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
 \newcommand{\todaay}{\leadingzero{\day}.~\monthword{\the\month} \the\year}
 
-
 % --------------------------------------------------------------------------------
 % set koma variables, this needs to be edited by the user
+\newcommand{\mail}{john.smith@example.com}
 \setkomavar{fromname}[]{John Smith}
 \setkomavar{fromzipcode}{12345}
 \setkomavar{place}{Ort}
@@ -50,7 +54,7 @@ backaddress=false,
 \setkomavar{fromaddress}{Straße 1\\
 \usekomavar{fromzipcode} \usekomavar{place}}
 \setkomavar{frommobilephone}{+1~234~56789}
-\setkomavar{fromemail}{john.smith@example.com}
+\setkomavar{fromemail}{\href{mailto:\mail}{\mail}}
 \setkomavar{date}{\todaay}
 \setkomavar{subject}{Bewerbung~als~<POSITION>}
 % --------------------------------------------------------------------------------
@@ -74,10 +78,14 @@ Kontakt       \\
 \begin{document}
 
 \begin{letter}{\address}
-  \opening{Sehr~geehrte~Damen~und~Herren}
+	\opening{Sehr~geehrte~Damen~und~Herren}
 
-  Hier den Text für das Anschreiben einfügen, max. 1 Seite.
-  \closing{Freundliche Grüße}
+	Hier den Text für das Anschreiben einfügen, max. 1 Seite.
+	\closing{Freundliche Grüße}
+
+	\encl{
+		Anlagen, die in der Bewerbung dabei sind
+	}
 
 \end{letter}
 

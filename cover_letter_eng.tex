@@ -4,6 +4,8 @@ fontsize=11pt, % fontsize
 twoside=off, % onesided layout
 version=last,
 foldmarks=false,
+fromalign=center,
+fromrule=true,
 frommobilephone,
 fromemail,
 subject=titled,
@@ -33,6 +35,8 @@ backaddress=false,
 ]{geometry}
 \usepackage{graphicx}
 
+\usepackage{hyperref}
+
 % custom commands
 \newcommand{\monthword}[1]{\ifcase#1\or January\or February\or March\or April\or
 	May\or June\or July\or August\or
@@ -42,6 +46,7 @@ backaddress=false,
 
 % --------------------------------------------------------------------------------
 % set koma variables, this needs to be edited by the user
+\newcommand{\mail}{john.smith@example.com}
 \setkomavar{fromname}[]{John Smith}
 \setkomavar{fromzipcode}{12345}
 \setkomavar{place}{Place}
@@ -49,7 +54,7 @@ backaddress=false,
 \setkomavar{fromaddress}{Street 1\\
 \usekomavar{fromzipcode} \usekomavar{place}}
 \setkomavar{frommobilephone}{+1~234~56789}
-\setkomavar{fromemail}{john.smith@example.com}
+\setkomavar{fromemail}{\href{mailto:\mail}{\mail}}
 \setkomavar{date}{\todaay}
 \setkomavar{subject}{Application~as~<POSITION>}
 % --------------------------------------------------------------------------------
@@ -73,11 +78,14 @@ Contact         \\
 \begin{document}
 
 \begin{letter}{\address}
-  \opening{To~whom~it~may~concern}
+	\opening{To~whom~it~may~concern}
 
-  Insert here the text for the cover letter, this should be max. 1 page.
-  \closing{Yours faithfully}
+	Insert here the text for the cover letter, this should be max. 1 page.
+	\closing{Yours faithfully}
 
+	\encl{
+		Attachments included in this application
+	}
 
 \end{letter}
 
