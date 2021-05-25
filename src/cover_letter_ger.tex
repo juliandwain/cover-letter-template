@@ -4,10 +4,11 @@ fontsize=11pt, % fontsize
 twoside=off, % onesided layout
 version=last,
 foldmarks=false,
-fromalign=center,
+fromalign=left, % center, if no logo is used, else left
 fromrule=true,
 frommobilephone,
 fromemail,
+fromlogo, % if a logo should be used, delete it otherwise
 subject=titled,
 backaddress=false,
 ]    
@@ -50,18 +51,23 @@ backaddress=false,
 \setkomavar{fromname}[]{John Smith}
 \setkomavar{fromzipcode}{12345}
 \setkomavar{place}{Ort}
-\setkomavar{signature}{\includegraphics[scale=0.05]{signature.png}\\John Smith}
+\setkomavar{signature}{\includegraphics[scale=0.05]{src/fig/signature.png}\\John Smith}
 \setkomavar{fromaddress}{Straße 1\\
 \usekomavar{fromzipcode} \usekomavar{place}}
 \setkomavar{frommobilephone}{+1~234~56789}
-\setkomavar{fromemail}{\href{mailto:\mail}{\mail}}
-\setkomavar{date}{\todaay}
 \setkomavar{subject}{Bewerbung~als~<POSITION>}
 % --------------------------------------------------------------------------------
+\setkomavar{firstfoot}{%
+\parbox[b]{\linewidth}{%
+\centering\def\\{, }\usekomavar{fromname}, \usekomavar{fromemail}%
+}%
+}
+\setkomavar{fromlogo}{\includegraphics{src/fig/logo.pdf}} % delete this if no logo should be used
+\setkomavar{fromemail}{\href{mailto:\mail}{\mail}}
+\setkomavar{date}{\todaay}
 
 % Layout
-\setplength{refvpos}{6cm}
-\setplength{refhpos}{5cm}
+\setplength{refvpos}{5.5cm}
 \setplength{subjectaftervskip}{\baselineskip}
 \setplength{toaddrvpos}{2cm}
 \setplength{sigbeforevskip}{0.2cm}
