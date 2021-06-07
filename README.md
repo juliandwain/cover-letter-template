@@ -27,15 +27,11 @@ If **no** logo should be used, then I recommend setting ``fromalign=center``, be
 
 ## Running
 
-The templates **must be run from the command line on the root directory**, which is the current directory.
-The templates can be run by e.g., using [``latexmk``](https://mg.readthedocs.io/latexmk.html), which is included in ``MikTeX``, or by running ``pdflatex``:
+The templates **must be run from the command line on the root directory**, which is the ``src`` directory (change here by typing ``cd ./src`` in the command line).
+The templates can be run by e.g., using [``latexmk``](https://mg.readthedocs.io/latexmk.html), which is included in ``MikTeX``:
 
 ```properties
-latexmk -pdf src/cover_letter_*.tex
-```
-
-```properties
-pdflatex src/cover_letter_*.tex
+latexmk cover_letter_*.tex
 ```
 
 Where the ``*`` stands for the corresponding ending.
