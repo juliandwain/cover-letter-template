@@ -1,0 +1,31 @@
+{
+    "editor.formatOnSave": true,
+    "latex-workshop.latex.outDir": "./..",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk",
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [],
+            "env": {}
+        },
+    ],
+    "latex-workshop.chktex.run": "onSave",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "spellright.language": [
+        "de",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}
