@@ -4,13 +4,16 @@ fontsize=11pt, % fontsize
 twoside=off, % onesided layout
 version=last,
 foldmarks=false,
-fromalign=left, % center, if no logo is used, else left
+fromalign=center, % center, if no logo is used, else left
 fromrule=true,
 frommobilephone,
 fromemail,
 fromlogo, % if a logo should be used, delete it otherwise
 subject=titled,
 backaddress=false,
+draft=true, % set to true if this is the final version
+firstfoot=false, % if the footer should be set or not
+final=false, % set this to true if this is the final version
 ]    
 {scrlttr2}
 
@@ -22,10 +25,10 @@ backaddress=false,
 \renewcommand{\familydefault}{\sfdefault}
 
 \newcommand{\toppagemargin}{2cm}
-\newcommand{\rightpagemargin}{2.5cm}
+\newcommand{\rightpagemargin}{2cm}
 \newcommand{\leftpagemargin}{2cm}
-\newcommand{\bottompagemargin}{2cm}
-\newcommand{\footerheight}{12mm}
+\newcommand{\bottompagemargin}{0.5cm}
+\newcommand{\footerheight}{8}
 
 \usepackage[
 	a4paper,
@@ -36,6 +39,8 @@ backaddress=false,
 	outer=\rightpagemargin
 ]{geometry}
 \usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
 
 \usepackage{hyperref}
 
@@ -53,7 +58,7 @@ backaddress=false,
 \setkomavar{fromzipcode}{12345}
 \setkomavar{place}{Place}
 \setkomavar{signature}{\includegraphics[scale=0.05]{fig/signature.png}\\\usekomavar{fromname}}
-\setkomavar{fromaddress}{Street 1\\
+\setkomavar{fromaddress}{Street 1,
 \usekomavar{fromzipcode} \usekomavar{place}}
 \setkomavar{frommobilephone}{+1~234~56789}
 \setkomavar{subject}{Application~as~<POSITION>}
@@ -67,10 +72,17 @@ backaddress=false,
 \setkomavar{fromemail}{\href{mailto:\mail}{\mail}}
 \setkomavar{date}{\todaay}
 
+\newcommand{\header}{\begin{tabular}{l|l|l|l}
+	\usekomavar{fromname} & \usekomavar{fromaddress} & \usekomavar{frommobilephone} & \usekomavar{fromemail}\\
+	\bottomrule[1pt]
+\end{tabular}}
+\setkomavar{firsthead}{\header}
+
 % Layout
-\setplength{refvpos}{5.5cm}
+\setplength{refvpos}{3.5cm}
+\setplength{firstheadvpos}{0.5cm}
 \setplength{subjectaftervskip}{\baselineskip}
-\setplength{toaddrvpos}{2cm}
+\setplength{toaddrvpos}{0.5cm}
 \setplength{sigbeforevskip}{0.2cm}
 
 % --------------------------------------------------------------------------------
